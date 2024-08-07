@@ -11,19 +11,19 @@ def multiplication_table(number):
     multiplier = 1
 
     # Complete the while loop condition.
-    while multiplier <= number:
+    while True :
         result = number * multiplier
 
         if result > 25:
             # Enter the action to take if the result is greater than 25
-            pass
+          break
         print(str(number) + "x" + str(multiplier) + "=" + str(result))
 
         # Increment the appropriate variable
         multiplier += 1
 
 
-multiplication_table(3)
+multiplication_table(6)
 
 # task 2
 """  Написати функцію, яка обчислює суму двох чисел.
