@@ -29,7 +29,7 @@ class NovaPoshtaTracking:
             status = status_element.text
         except Exception as e:
             status = None
-            print(f"Не вдалося отримати статус. Помилка: {e}")
+            print(f"Failed to get status. Error: {e}")
 
 
         self.driver.quit()
@@ -37,9 +37,7 @@ class NovaPoshtaTracking:
         return status
 
 
-
-
-class TestNovaPoshtaTracking(unittest.TestCase):
+class TestNovaPoshtaTracking():
 
     def setUp(self):
 
@@ -48,7 +46,7 @@ class TestNovaPoshtaTracking(unittest.TestCase):
 
     def test_tracking_status(self):
         tracking_number = "20400012345678"
-        expected_status = "Посилка отримана"
+        expected_status = "Parcel received"
 
 
         actual_status = self.tracker.get_status(tracking_number)
